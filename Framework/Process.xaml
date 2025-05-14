@@ -119,7 +119,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="761,499.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1127,832.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Int32" Name="Int_NumberOfWorkItems" />
       <Variable x:TypeArguments="x:Int32" Name="Int_WorkItemCounter" />
@@ -380,7 +380,7 @@
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           <av:Point x:Key="ShapeLocation">790,1320</av:Point>
                                                           <av:Size x:Key="ShapeSize">60,60</av:Size>
-                                                          <av:PointCollection x:Key="TrueConnector">790,1350 308,1350 308,490 635,490</av:PointCollection>
+                                                          <av:PointCollection x:Key="TrueConnector">790,1350 246,1350 246,490 635,490</av:PointCollection>
                                                           <av:PointCollection x:Key="FalseConnector">850,1350 920,1350 920,1405</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>

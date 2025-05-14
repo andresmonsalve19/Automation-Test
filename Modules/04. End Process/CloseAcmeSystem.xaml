@@ -104,7 +104,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CloseAcmeSystem" sap:VirtualizedContainerService.HintSize="1249,1765" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CloseAcmeSystem" sap:VirtualizedContainerService.HintSize="1121,1765" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Bool_LogoutSucess" />
     </Sequence.Variables>
@@ -158,7 +158,7 @@
                     <ui:LogMessage DisplayName="Log Message - Print Logout Failed [CloseAcmeSystem]" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;[CloseAcmeSystem] --&gt; Logout failed.&quot;]" />
                   </uix:NCheckState.IfNotExists>
                   <uix:NCheckState.Target>
-                    <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" ContentHash="hQYKO1t2PUWlhkVjGHSoxw" DesignTimeRectangle="184, 426, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ' aaname='Email:' /&gt;" Guid="867a5dc4-d6b5-43ab-b79b-0cd213de03d9" InformativeScreenshot="a00a9a1519fbfd92bce95a562b67ab70.png" IsResponsive="True" Reference="b8xXgZ4zaU-qNOZPsChwJg/43iOAfoKMEW_GLTopCZ-8Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" ContentHash="IQO7YIuMm0SWPhMugUCqBQ" DesignTimeRectangle="184, 426, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ' aaname='Email:' /&gt;" Guid="867a5dc4-d6b5-43ab-b79b-0cd213de03d9" ImageBase64="" InformativeScreenshot="b7681772c8d8de3ff7a1e917e316b706.png" IsResponsive="True" Reference="b8xXgZ4zaU-qNOZPsChwJg/43iOAfoKMEW_GLTopCZ-8Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
                         <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                           <uix:Target DesignTimeRectangle="184, 401, 42, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Email:' check:innerText='Email:' /&gt;" Guid="3669bf6f-6d1e-4d0b-8daa-3e692e2e4593" SearchSteps="FuzzySelector" />
