@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Keyboard Shortcuts - Click to Save Document",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "G-nVvzgKwUCL6y1cuU2MMQ",
+  "Reference": "b8xXgZ4zaU-qNOZPsChwJg/G-nVvzgKwUCL6y1cuU2MMQ",
+  "ParentRef": "b8xXgZ4zaU-qNOZPsChwJg/qAJEaq6cZUCB2y-OuqBZ9g",
+  "Created": "2025-05-14T02:47:38.4499797Z",
+  "Updated": "2025-05-14T03:35:33.5044908Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

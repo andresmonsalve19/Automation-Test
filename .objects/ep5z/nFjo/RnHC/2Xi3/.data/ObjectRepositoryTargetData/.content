@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NR5EpZhupEeYpNVaMd13hw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/work-items/94426349" CVScreenId="db8c92cf-c476-47c1-9c9c-c1ba50b7d4c5" CvElementArea="212, 479, 210, 37" CvTextArea="244, 491, 165, 16" CvTextArgument="Download Check Request" CvType="Button" DesignTimeRectangle="215, 481, 205, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='*Download Check Request' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Download Check Request' tag='BUTTON' type='button' class='btn btn-primary' check:innerText='Download Check Request' /&gt;" Guid="21eccfb8-eecb-4c54-a262-4e86286a4027" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="254f64247209dc2caba10a1080040db7.png" xmlns="">05zBCmjwPhUq8b_U4xnC9kA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

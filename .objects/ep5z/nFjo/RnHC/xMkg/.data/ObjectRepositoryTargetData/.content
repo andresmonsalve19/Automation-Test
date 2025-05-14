@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DMDlGgnD3kWcRiV7maBvnA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/testdata/checks/167/Check-Request-For-81518076.pdf" CVScreenId="35801e34-ad34-4bcf-9ef4-439e8d44711f" CvElementArea="129, 549, 1035, 24" CvType="InputBox" DesignTimeRectangle="136, 553, 1010, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="8b4e42be-a865-46fc-90af-8436b2452ea5" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="35801e34-ad34-4bcf-9ef4-439e8d44711f" CvTextArea="80, 555, 48, 12" CvTextArgument="Nombre:" CvType="Text" DesignTimeRectangle="18, 550, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;ctrl name='Panel del explorador' role='pane' /&gt;&lt;ctrl name='Panel de diseño de carpeta' role='pane' /&gt;&lt;ctrl name='Panel de detalles' role='pane' /&gt;&lt;ctrl name='Nombre:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;ctrl name='Panel del explorador' role='pane' /&gt;&lt;ctrl name='Panel de diseño de carpeta' role='pane' /&gt;&lt;ctrl name='Panel de detalles' role='pane' /&gt;&lt;ctrl name='Nombre:' role='text' automationid='' check:text='Nombre:' /&gt;" Guid="9036868b-4873-4b92-b11e-01d789aaf6bc" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="5431864c29b2ac29ff3940e37d44ed9a.png" xmlns="">01ihrUDd3_0Gf7ZoTS57WVA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

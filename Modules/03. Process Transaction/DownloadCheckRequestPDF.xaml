@@ -1,0 +1,342 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DownloadCheckRequestPDF" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Dic_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_Str_WorkItemID" Type="InArgument(x:String)" />
+    <x:Property Name="out_Bool_DownloadSuccessful" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>DownloadCheckRequestPDF_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Activities.System.FileOperations</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.PDF.ExtractPDFText</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.PDF</x:String>
+      <x:String>System.Security</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This module is used to download the Check Request PDF Document." DisplayName="DownloadCheckRequestPDF" sap:VirtualizedContainerService.HintSize="824,2279" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Print Module Start [DownloadCheckRequestPDF]" sap:VirtualizedContainerService.HintSize="824,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[DownloadCheckRequestPDF] --&gt; Process starting...&quot;]" />
+    <TryCatch DisplayName="Try Catch - Downlaod Check Request PDF" sap:VirtualizedContainerService.HintSize="824,1888" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="ACME Dashboard" sap:VirtualizedContainerService.HintSize="590,1547" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="8c5aa7b0-bb6e-4d8c-a802-c7437354bf6d" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do - Downlaod Check Request PDF" sap:VirtualizedContainerService.HintSize="556,1290" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="upr:ILocalResource" Name="ILR_FileDownloaded" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NGoToUrl DisplayName="Go To URL - Work Item Detail" sap:VirtualizedContainerService.HintSize="522,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_Dic_Config(&quot;ACME_RootUrl&quot;).ToString + in_Dic_Config(&quot;ACME_WorkItems&quot;).ToString + &quot;/&quot; + in_Str_WorkItemID]" Version="V4" />
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Download Check Request Button" sap:VirtualizedContainerService.HintSize="522,225" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8c5aa7b0-bb6e-4d8c-a802-c7437354bf6d" Version="V4">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/94426349" CVScreenId="db8c92cf-c476-47c1-9c9c-c1ba50b7d4c5" ContentHash="NR5EpZhupEeYpNVaMd13hw" CvElementArea="212, 479, 210, 37" CvTextArea="244, 491, 165, 16" CvTextArgument="Download Check Request" CvType="Button" DesignTimeRectangle="215, 481, 205, 34" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='*Download Check Request' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Download Check Request' tag='BUTTON' type='button' class='btn btn-primary' check:innerText='Download Check Request' /&gt;" Guid="21eccfb8-eecb-4c54-a262-4e86286a4027" InformativeScreenshot="254f64247209dc2caba10a1080040db7.png" Reference="b8xXgZ4zaU-qNOZPsChwJg/2Xi3KCpMEE2PhTGkdhiNCg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                  <uix:NClick.VerifyOptions>
+                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionOptions.Retry>
+                      <uix:VerifyExecutionOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionOptions.Timeout>
+                    </uix:VerifyExecutionOptions>
+                  </uix:NClick.VerifyOptions>
+                </uix:NClick>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="522,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,276" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Download PDF Button" sap:VirtualizedContainerService.HintSize="416,216" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8c5aa7b0-bb6e-4d8c-a802-c7437354bf6d" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/testdata/checks/167/Check-Request-For-81518076.pdf" CVScreenId="25736dc9-081e-4d95-b487-305b7754a3e1" ContentHash="MYRG6ecJD0K9W1vVE85m7A" CvElementArea="1260, 146, 20, 20" CvType="Icon" DesignTimeRectangle="1260, 147, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl name='Check-Request-For-81518076.pdf' role='document' /&gt;&lt;ctrl name='Descargar' role='push button' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Check-Request-For-81518076.pdf' role='document' /&gt;&lt;ctrl name='Descargar' role='push button' /&gt;&lt;ctrl automationid='' role='grouping' /&gt;" Guid="1d0d7acb-ddff-4c0b-b4d8-ffce7cb34704" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB9SURBVEhL7ZHRCcAgDEQ7WOZ0IhdyAssJgXzE5iJIW/DjoUS9p+YSkb6TIwj5lqDWOvDWZhxByPuCUsoAcyuw9ScoQWttjCqwNe+MhfoiDVQBGw7oHqgkEw5STUZwJhxMBexN9WXeGggFDEsCPciAvV4GSPVghSMI+btA+g0PSDRx89p6/AAAAABJRU5ErkJggg==" InformativeScreenshot="a40433121df9b73bb7518cec2c282368.png" Reference="b8xXgZ4zaU-qNOZPsChwJg/9E8h1fDni0y8xyEJiqcXwg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Check-Request-For-81518076.pdf - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBetweenShortcuts="0.2" DisplayName="Keyboard Shortcuts - Click to Save Document" sap:VirtualizedContainerService.HintSize="522,267" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="8c5aa7b0-bb6e-4d8c-a802-c7437354bf6d" Shortcuts="[d(hk)][d(ctrl)]s[u(ctrl)][u(hk)]" Version="V4">
+                  <uix:NKeyboardShortcuts.Target>
+                    <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/testdata/checks/167/Check-Request-For-83321523.pdf" ContentHash="Phz1sQ7qVkaThItmKOorhw" DesignTimeRectangle="8, 129, 1366, 617" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl name='Check-Request-For-*.pdf' role='document' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Check-Request-For-*.pdf' role='document' /&gt;&lt;ctrl role='grouping' automationid='' check:fulltext='Check-Request-For-59339223.pdf/1 1 100% Se terminó de cargar el PDF&amp;#xD;&amp;#xA;Client Check Copy Request Form&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Client Information&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Client Name&amp;#xD;&amp;#xA;Client ID&amp;#xD;&amp;#xA;Client Address&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Check Information&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Check Number&amp;#xD;&amp;#xA;Check Date&amp;#xD;&amp;#xA;Check Amount&amp;#xD;&amp;#xA;(incl. currency)&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Employee who handled the request: John Doe, JD12326&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;For internal use only – do not distribute to the client&amp;#xD;&amp;#xA; Mayra Monzon&amp;#xD;&amp;#xA;BA92200&amp;#xD;&amp;#xA;96 avenue Ferdinand de Lesseps&amp;#xD;&amp;#xA; 59339223&amp;#xD;&amp;#xA;2018-03-12&amp;#xD;&amp;#xA;162447 EUR' /&gt;" Guid="6b23f8f3-ec83-4136-a6a2-7a44cc9c6820" InformativeScreenshot="3c4b30da9afd3a372263d08b50d96377.png" Reference="b8xXgZ4zaU-qNOZPsChwJg/G-nVvzgKwUCL6y1cuU2MMQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Check-Request-For-*.pdf - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                  </uix:NKeyboardShortcuts.Target>
+                  <uix:NKeyboardShortcuts.VerifyOptions>
+                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears" Retry="True">
+                      <uix:VerifyExecutionOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionOptions.Timeout>
+                    </uix:VerifyExecutionOptions>
+                  </uix:NKeyboardShortcuts.VerifyOptions>
+                </uix:NKeyboardShortcuts>
+                <uix:NCheckState DisplayName="Check App State - File Explorer Popup In Which Put The Download Path Appears?" sap:VirtualizedContainerService.HintSize="522,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8c5aa7b0-bb6e-4d8c-a802-c7437354bf6d" Version="V4">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears - Save The Download In The Corresponding Folder" sap:VirtualizedContainerService.HintSize="450,566" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into - Download File Path" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="8c5aa7b0-bb6e-4d8c-a802-c7437354bf6d" Text="[in_Dic_Config(&quot;Robot_Path&quot;).ToString + in_Dic_Config(&quot;DownloadsFolderPath&quot;).ToString + in_Str_WorkItemID + &quot;.pdf&quot;]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/testdata/checks/167/Check-Request-For-81518076.pdf" CVScreenId="35801e34-ad34-4bcf-9ef4-439e8d44711f" ContentHash="DMDlGgnD3kWcRiV7maBvnA" CvElementArea="129, 549, 1035, 24" CvType="InputBox" DesignTimeRectangle="136, 553, 1010, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="8b4e42be-a865-46fc-90af-8436b2452ea5" InformativeScreenshot="5431864c29b2ac29ff3940e37d44ed9a.png" IsResponsive="True" Reference="b8xXgZ4zaU-qNOZPsChwJg/xMkga7Km-E-swDnc-hirYg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="35801e34-ad34-4bcf-9ef4-439e8d44711f" CvTextArea="80, 555, 48, 12" CvTextArgument="Nombre:" CvType="Text" DesignTimeRectangle="18, 550, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;ctrl name='Panel del explorador' role='pane' /&gt;&lt;ctrl name='Panel de diseño de carpeta' role='pane' /&gt;&lt;ctrl name='Panel de detalles' role='pane' /&gt;&lt;ctrl name='Nombre:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;ctrl name='Panel del explorador' role='pane' /&gt;&lt;ctrl name='Panel de diseño de carpeta' role='pane' /&gt;&lt;ctrl name='Panel de detalles' role='pane' /&gt;&lt;ctrl name='Nombre:' role='text' automationid='' check:text='Nombre:' /&gt;" Guid="9036868b-4873-4b92-b11e-01d789aaf6bc" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Save" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8c5aa7b0-bb6e-4d8c-a802-c7437354bf6d" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/testdata/checks/167/Check-Request-For-81518076.pdf" CVScreenId="23a06f1b-1473-4788-b6df-be63016ee919" ContentHash="BOWFqF2s6kSxma5jIo95UQ" CvElementArea="965, 617, 90, 27" CvTextArea="988, 624, 44, 12" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="966, 618, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' check:text='&amp;amp;Guardar' /&gt;" Guid="c0c06435-6cac-4c08-9d70-39134a22a8e2" InformativeScreenshot="2edfe7510b3117057bbd9827a5346c17.png" Reference="b8xXgZ4zaU-qNOZPsChwJg/MuTtccAZqkaLYTy-7LFXDg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/testdata/checks/167/Check-Request-For-81518076.pdf" CVScreenId="35801e34-ad34-4bcf-9ef4-439e8d44711f" ContentHash="DMDlGgnD3kWcRiV7maBvnA" CvElementArea="129, 549, 1035, 24" CvType="InputBox" DesignTimeRectangle="136, 553, 1010, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="8b4e42be-a865-46fc-90af-8436b2452ea5" InformativeScreenshot="5431864c29b2ac29ff3940e37d44ed9a.png" IsResponsive="True" Reference="b8xXgZ4zaU-qNOZPsChwJg/xMkga7Km-E-swDnc-hirYg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="35801e34-ad34-4bcf-9ef4-439e8d44711f" CvTextArea="80, 555, 48, 12" CvTextArgument="Nombre:" CvType="Text" DesignTimeRectangle="18, 550, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;ctrl name='Panel del explorador' role='pane' /&gt;&lt;ctrl name='Panel de diseño de carpeta' role='pane' /&gt;&lt;ctrl name='Panel de detalles' role='pane' /&gt;&lt;ctrl name='Nombre:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;ctrl name='Panel del explorador' role='pane' /&gt;&lt;ctrl name='Panel de diseño de carpeta' role='pane' /&gt;&lt;ctrl name='Panel de detalles' role='pane' /&gt;&lt;ctrl name='Nombre:' role='text' automationid='' check:text='Nombre:' /&gt;" Guid="9036868b-4873-4b92-b11e-01d789aaf6bc" SearchSteps="Selector, FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheckState>
+                <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="522,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                <ui:FileExistsX DisplayName="File Exists - Check Request PDF Downloaded" Exists="[out_Bool_DownloadSuccessful]" sap:VirtualizedContainerService.HintSize="522,165" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[in_Dic_Config(&quot;DownloadsFolderPath&quot;).ToString + in_Str_WorkItemID + &quot;.pdf&quot;]" />
+                <uix:NNavigateBrowser DisplayName="Navigate Browser - Go Back" sap:VirtualizedContainerService.HintSize="522,114" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V4" />
+                <uix:NGoToUrl DisplayName="Go To URL - Dashboard" sap:VirtualizedContainerService.HintSize="522,107" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[in_Dic_Config(&quot;ACME_RootUrl&quot;).ToString]" Version="V4" />
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-8, -8, 1382, 754" BrowserType="Chrome" ContentHash="DjjZ_xjWZEibZpa1EWKRPg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASJSURBVFhHvZdtbFNlFMePblYqvkYTRFyCLOrQhC9CjB80KCqaiCF80C+CRhIZClHJ3AsDt+6FjnbttIyXzRfI3NiYZIm46AcDm4XRN9a1XStu6waL2dgq2xhTTJZtj/9zy23vZltZafnwb/Pc3uf5/3ruec55LtEeZz90FRq/xWLPiwwgQipltYfHCRfWZg/lNXyMhQaac4LybYJ22ZOjfBbWZ4gyyXOEAcZJiwF+XHvM31jlubwx79fBzJw4Jc/NahnM3GkOisfZrYOZWuvw+ztODRRTCSJRJEV6NAjARJ/bxYamC2sAQFiEMCkuyXMBQDCXxGMAEAAIAKTa2wE/h8AfVwAUOcRL9f7tyQb42j2yPJUBCucC4MLrjb0fJQpgaHJm2crKzrbVDf4qHssAVc7LT0QFWJsgACHEQyllLkEfmgVtMYtdbUMnZACjbTg6wBvfhwHS9nur1Tq3EzvD+UpjrymSGWvFN7+bqeic416D25NS4tzMc1svXdtEm1sEVXgEfdKGjO8QMkC5LRAdYN3xMIBa77pGhdiWORax8khXIJI5a0mlV1CuRVAx7tW0H74OQOlfnRe07bSkpt5xzbwB7jN6LFSMrbLTJp6r7T4ZyZy17KBvStrbKDIPfOEpUADQ7paBDbnWwFMACOXAoVg5MAvA4LEpAFoimbMAMMP3MMBCvbtwDgABgIb/nr5NBqh2jSQPQFXWEQJYesAn1Hgsd+k6BPKpQgao8YwmGOCQb1oGUCsicI/RLegz5AZKsErn0skAdd7EA4QioATAvxa0G7Ufze1hU2ehDFCbaID0KACP8u5gANT9RV/GAXC/8YYBIj6CuADeVAAs2OuyS10LW2xVTfepSOasjGrfpASgxb2lTs1NASgrIZLIiwonKNsi1jT4f45kzko7EDZaaHDrbwrghaP+EMC7P/WfoE/PCso6K56t6xmMZM5K1SHb0copxypMzsBWGeCRfXEAPF8bBjjsG90ilVJuKngMXVcnH5trPiPECsqzcgmWttvFvyYXywCLTJ3zB3i5YRYAqcthnodF+OYCh8g/fek9vT2QUf/b2PLc1oFs4l5RgrnbzohnaruvAECaGysCNbEAXlO0YwZo/mNiK71zEhmO3zkfEGZVOULO4ywUGT5DsskHZjE2LV5VAqRxDvCjQR1YbPIW3FAEIgDQ28397bQDufAx2ipP4s7HB0xEhK+rNA6x8ZcBHQBICUBamGw/IyUxorRfBqj3zR+AmvsmVr3V1PfjgzqXuBu1PRX9fYnRM7Hphwvf9f8zpYJoLsCLR3uupO/rnHqyyidW1/mzZYAjnhjNKAYAAYAAQAAgABAACADE5lEACAAEAAJAqB0fdMYAwJEsdChNFsC3rpGMqAA4lK67BQB0Jx7jf4/lyOb1x/tKj50fW1phDzytt86WDjJAZZYhaWyIcM//qdL55+M66/D6VE5QJC+8JYDgqxkgUvDDAiTa7fjmMCVad0C0B+LaEXwdlF7NggN+V+PXJd5eTJcMyWvLnix89ECjUECS9vp3MjR7bXg6u/4FPqMYP5QOgtAAAAAASUVORK5CYII=" InformativeScreenshot="d2c6658e542dd32f018b04ec4a2d880d.jpg" Reference="b8xXgZ4zaU-qNOZPsChwJg/qAJEaq6cZUCB2y-OuqBZ9g" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" Title="ACME System 1 - Dashboard" Url="[in_Dic_Config(&quot;ACME_RootUrl&quot;).ToString]" Version="V1" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Body" sap:VirtualizedContainerService.HintSize="590,56" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Catch Error - Downlaod Check Request PDF" sap:VirtualizedContainerService.HintSize="788,247" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - Print Error Caught [Downlaod Check Request PDF]" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;[DownloadCheckRequestPDF] --&gt; There was an error trying to download the check request PDF file for the work item with ID [ &quot; + in_Str_WorkItemID + &quot; ], please validate.&quot; + Environment.NewLine + &quot;Error message: &quot; + exception.Message]" />
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="590,89" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </TryCatch.Finally>
+    </TryCatch>
+    <ui:LogMessage DisplayName="Log Message - Print Module End [DownloadCheckRequestPDF]" sap:VirtualizedContainerService.HintSize="824,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[DownloadCheckRequestPDF] --&gt; Process finished.&quot;]" />
+  </Sequence>
+</Activity>

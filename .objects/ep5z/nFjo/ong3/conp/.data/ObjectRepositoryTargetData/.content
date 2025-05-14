@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Gc8MtbaHqk-Y1osaSWCWpQ" Reference="b8xXgZ4zaU-qNOZPsChwJg/conppiyAHkmAuIJxnUcFiQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/login" CVScreenId="e129d9a1-746d-4b2d-baea-c0d18f41da51" CvElementArea="182, 540, 63, 37" CvTextArea="195, 551, 37, 16" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="182, 540, 63, 37" DesignTimeScaleFactor="1" ElementType="Button" Guid="62387bcd-a84f-4ab4-b407-144a7ca11a66" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Log In - Google Chrome' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="e129d9a1-746d-4b2d-baea-c0d18f41da51" CvElementArea="246, 539, 173, 37" CvTextArea="260, 551, 147, 16" CvTextArgument="Forgot Your Password?" CvType="Button" DesignTimeRectangle="247, 539, 173, 37" ElementType="Button" Guid="c56ef9ed-d37a-4ba7-a04f-603112f9974f" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="401fe402f3394c5fd98f7d9cd25d5ea9.png" xmlns="">0O0diIvjfZkme9FjxHOkg2A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

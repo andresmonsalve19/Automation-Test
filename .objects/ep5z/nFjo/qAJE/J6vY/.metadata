@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Actions",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "J6vYSSZ040ehU-PeR2Hdpw",
+  "Reference": "b8xXgZ4zaU-qNOZPsChwJg/J6vYSSZ040ehU-PeR2Hdpw",
+  "ParentRef": "b8xXgZ4zaU-qNOZPsChwJg/qAJEaq6cZUCB2y-OuqBZ9g",
+  "Created": "2025-05-12T19:18:29.7716826Z",
+  "Updated": "2025-05-12T19:18:29.7716826Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

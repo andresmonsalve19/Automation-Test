@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MYRG6ecJD0K9W1vVE85m7A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/testdata/checks/167/Check-Request-For-81518076.pdf" CVScreenId="25736dc9-081e-4d95-b487-305b7754a3e1" CvElementArea="1260, 146, 20, 20" CvType="Icon" DesignTimeRectangle="1260, 147, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl name='Check-Request-For-81518076.pdf' role='document' /&gt;&lt;ctrl name='Descargar' role='push button' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Check-Request-For-81518076.pdf' role='document' /&gt;&lt;ctrl name='Descargar' role='push button' /&gt;&lt;ctrl automationid='' role='grouping' /&gt;" Guid="1d0d7acb-ddff-4c0b-b4d8-ffce7cb34704" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB9SURBVEhL7ZHRCcAgDEQ7WOZ0IhdyAssJgXzE5iJIW/DjoUS9p+YSkb6TIwj5lqDWOvDWZhxByPuCUsoAcyuw9ScoQWttjCqwNe+MhfoiDVQBGw7oHqgkEw5STUZwJhxMBexN9WXeGggFDEsCPciAvV4GSPVghSMI+btA+g0PSDRx89p6/AAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Check-Request-For-81518076.pdf - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a40433121df9b73bb7518cec2c282368.png" xmlns="">0DEDwBGrrB027_wRS9gfUWA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

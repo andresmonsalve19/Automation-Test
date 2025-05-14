@@ -1,0 +1,15 @@
+﻿{
+  "Name": "ACME Work Items",
+  "Type": "Screen",
+  "Id": "GK4xAyCVS0SLwQZx7Zm89Q",
+  "Reference": "b8xXgZ4zaU-qNOZPsChwJg/GK4xAyCVS0SLwQZx7Zm89Q",
+  "ParentRef": "b8xXgZ4zaU-qNOZPsChwJg/nFjo-ANKYUSAgjW_TDw0lw",
+  "Created": "2025-05-12T19:49:28.7859068Z",
+  "Updated": "2025-05-12T19:49:34.3981348Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

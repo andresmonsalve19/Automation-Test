@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="31XDWWNmmkyrS7FXCq3KdA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/work-items/update/94426349" CVScreenId="3e27edf7-121c-4dc3-9134-7ba5c9db0503" CvElementArea="142, 409, 1083, 57" CvType="InputBox" DesignTimeRectangle="145, 411, 1078, 54" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='newComment' tag='TEXTAREA' type='text' class='form-control' aaname='' /&gt;" Guid="7cf23d04-65c2-4a82-8413-8e60074b5a6c" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="3e27edf7-121c-4dc3-9134-7ba5c9db0503" CvTextArea="143, 389, 110, 13" CvTextArgument="Add Comments:" CvType="Text" DesignTimeRectangle="145, 386, 108, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' aaname='Add Comments:' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' aaname='Add Comments:' type='' class='' check:text='Add Comments:' /&gt;" Guid="2063e310-8363-4053-a515-ecd380c72093" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="74690930b461b05fb46064310ddf3da0.png" xmlns="">07CN_kAu6EEePoKrRXwYz_Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
