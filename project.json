@@ -4,6 +4,7 @@
   "description": "This is my Neostella test solution to apply for an Automation job position.",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Credentials.Activities": "[2.1.0]",
     "UiPath.Excel.Activities": "[3.0.1]",
     "UiPath.PDF.Activities": "[3.22.1]",
     "UiPath.System.Activities": "[25.4.2]",
