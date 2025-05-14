@@ -3,26 +3,25 @@ This automation is the solution of a technical test with the following statement
 
 1. Login to the ACME System: https://acme-test.uipath.com/
 2. Navigate to Work Items
-3. Build a blank Excel report that will contain the extracted check data. This report should
-contain the following columns:
- 1. Client Name
- 2. Client ID
- 3. Check Number
- 4. Check Data
- 5. Check Amount
+3. Build a blank Excel report that will contain the extracted check data. This report should contain the following columns:
+   1. Client Name
+   2. Client ID
+   3. Check Number
+   4. Check Data
+   5. Check Amount
 4. Extract all Work Items with “Type” = “WI2” and “Status” = “Open”
 5. For each Work item of “Type” = “WI2” and “Status” = “Open”:
- 1. Download the check request PDF
- 2. Extract the following information from the PDF:
-  1. Client Name
-  2. Client ID
-  3. Check Number
-  4. Check Date
-  5. Check Amount
- 3. Add the extracted data to the Excel Report into its applicable column
- 4. Go back to the Work Item details page
- 5. Click on Update Work Item
- 6. Update the Work Item comments with “Extracted check information to report.” and status to “Completed”
+   1. Download the check request PDF
+   2. Extract the following information from the PDF:
+      1. Client Name
+      2. Client ID
+      3. Check Number
+      4. Check Date
+      5. Check Amount
+  3. Add the extracted data to the Excel Report into its applicable column
+  4. Go back to the Work Item details page
+  5. Click on Update Work Item
+  6. Update the Work Item comments with “Extracted check information to report.” and status to “Completed”
 6. Save the completed Excel report with the name “Client-Check-Copy-Report-[Current Date].xlsx”
 7. Display a Message at the end of the process that shows the file path to the completed excel report and indicates the process completed successfully.
 
@@ -36,12 +35,12 @@ contain the following columns:
 - Excel en licencia de Microsoft 365 version 16.0.18730.20142
   
 #### Project dependencies ####
-UiPath.Credentials.Activities: [2.1.0]
-UiPath.Excel.Activities: [3.0.1]
-UiPath.PDF.Activities: [3.22.1]
-UiPath.System.Activities: [25.4.2]
-UiPath.Testing.Activities: [25.4.0]
-UiPath.UIAutomation.Activities: [24.10.7]
+- UiPath.Credentials.Activities: [2.1.0]
+- UiPath.Excel.Activities: [3.0.1]
+- UiPath.PDF.Activities: [3.22.1]
+- UiPath.System.Activities: [25.4.2]
+- UiPath.Testing.Activities: [25.4.0]
+- UiPath.UIAutomation.Activities: [24.10.7]
 
 ### Steps to launch the automation correctly ###
 1. Create an account in https://acme-test.uipath.com/
