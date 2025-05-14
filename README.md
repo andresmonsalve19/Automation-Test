@@ -47,6 +47,7 @@ This automation is the solution of a technical test with the following statement
 2. Go to Data/Config.xlsx and change the following values:
    1. Robot_Path: Put the path where you clone this project on your machine.
 3. Create a credential with the name "ACMESystem1_Credential" in Windows Credential Manager to store your ACME website credentials.
+4. Go to chrome settings (chrome://settings/). In the Downloads menu activate "Ask where to save each file before downloading" option.
 
 ### Documentation is included in the Documentation folder ###
 
